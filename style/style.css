@@ -1,0 +1,45 @@
+
+
+
+.box {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+	align-items: center;
+  gap: 10px;
+}
+
+#app {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+	width: max-content;
+}
+
+input {
+  margin-top: 30px;	
+}
+
+.start {
+	background: transparent;
+	color: black;
+}
+.green {
+	background: green;
+	color: aliceblue;
+}
+.red {
+	background: red;
+	color: aliceblue;
+}
+.orange {
+	background: orange;
+	color: aliceblue;
+}

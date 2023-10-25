@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+
+  <body>
+    <div class="box">
+      <div id="app">
+
+        <h1>{{count}}</h1>
+        <button @click="color = 'green'">{{buttonIn}}</button>
+        <button @click="color = 'orange'">{{buttonInSec}}</button>
+        <button @click="color = 'red'">{{buttonInThird}}</button>
+
+				<input :type="show ? 'text' : 'password' " v-model="holder">
+
+				<p :class="color" v-if="holder.length == 0">Your field is empty</p>
+				<p :class="color" v-else-if="holder.length == isNaN(holder) ">You not entered number {{}}</p>
+				<p :class="color" v-else-if="holder.length > 0 && holder.length <= 10 ">You entered {{holder}}</p>
+				<p :class="color" v-else-if="holder.length == isNaN(holder)">You entered only numbers {{holder}}</p>
+				<p :class="color" v-else >You entered too many string characters</p>
+
+				<button @click="show = !show" >
+					{{show ? 'hidden' : 'show'}}
+				</button>
+      </div>
+    </div> 
+
+    <script src="urok.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
