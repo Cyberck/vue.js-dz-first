@@ -23,7 +23,7 @@
 				<p :class="color" v-if="holder.length == 0">Your field is empty</p>
 				<p :class="color" v-else-if="holder.length == isNaN(holder) ">You not entered number {{}}</p>
 				<p :class="color" v-else-if="holder.length > 0 && holder.length <= 10 ">You entered {{holder}}</p>
-				<p :class="color" v-else-if="holder.length == isNaN(holder)">You entered only numbers {{holder}}</p>
+				<p :class="color" v-else-if="holder.length > 10 ">You entered so many numbers {{holder}}</p>
 				<p :class="color" v-else >You entered too many string characters</p>
 
 				<button @click="show = !show" >
